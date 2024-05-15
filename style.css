@@ -1,0 +1,154 @@
+
+*::selection {
+    background-color: black;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:500px) {
+    .box {
+        width: 45%;
+        background-color: yellow;
+    }
+}
+
+@media screen and (max-width:700px) and (min-width:500px) {
+    .box {
+        background-color: orange;
+    }
+}
+
+.spanForBefore {
+    position: relative;
+}
+
+.spanForBefore::before {
+    content: " ";
+    position: absolute;
+    top: 40%;
+    left: -5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.spanForBefore::after {
+    content: " ";
+    position: absolute;
+    top: 40%;
+    right: -5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+p::-webkit-scrollbar {
+    display: block;
+    width: 3px;
+}
+
+p::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 10px;
+}
+
+p:hover {
+    background-color: violet;
+    
+    cursor: grabbing;
+}
+
+p::-webkit-scrollbar-track {
+    background-color: blue;
+}
+
+p {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+p::first-line {
+    color: red;
+}
+
+p::first-letter {
+    font-size: xx-large;
+}
+
+p::selection {
+    color: red;
+    background-color: gray;
+}
+
+.classs::before {
+    content: '';
+    color: red;
+    font-size: 23px;
+}
+
+.wrapper>div:first-child {
+    background-color: yellow;
+}
+
+.wrapper>div:nth-child(5) {
+    background-color: yellow;
+}
+
+.btn {
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    color: white;
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+}
+
+.btn:active {
+    background-color: red;
+}
+
+input:valid {
+    border: 3px solid red;
+}
+.one{
+    width: 50%;
+    min-width: 300px;
+    max-width: 500px;
+    height: 70px;
+
+    background-color: red;
+}
+.two
+{
+    text-align: start;
+    text-align-last:center ;
+    direction: ltr;
+    text-indent:20px ;
+    letter-spacing: 1px;
+}
